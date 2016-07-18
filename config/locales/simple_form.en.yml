@@ -29,3 +29,10 @@ en:
     # prompts:
     #   defaults:
     #     age: 'Select your age'
+    placeholders:
+      user:
+        login: 'Name or email'
+        storytime_name: 'JohnDoe'
+        email: 'john_doe@domain.com'
+        password: 'qwerty...'
+        password_confirmation: 'qwerty... again'
