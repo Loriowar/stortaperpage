@@ -1,0 +1,21 @@
+.simple_form {
+  .devise-form-group {
+    margin-bottom: 10px;
+  }
+
+  .error-notification {
+    margin-bottom: 10px;
+  }
+
+  .devise-form-group {
+    .error-inline {
+      margin: 0 0 10px 15px;
+      color: red;
+    }
+
+    .help-block {
+      margin-left: 15px;
+      font-style: italic;
+    }
+  }
+}
