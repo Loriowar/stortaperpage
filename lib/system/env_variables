@@ -1,0 +1,9 @@
+# system env variables for webapp
+MAIL_SENDER_SITE_HOST="my.site.com"
+MAIL_SENDER_SITE_PORT="80"
+MAIL_SENDER_ADDRESS="smtp.domain.com"
+MAIL_SENDER_PORT="465"
+MAIL_SENDER_USERNAME="robosender@mydomain.com"
+MAIL_SENDER_PASSWORD="qwerty"
+SECRET_KEY_BASE="'rake secret' must appear here"
+DEVICE_SECRET_KEY_BASE="'rake secret' must appear here again"
