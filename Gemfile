@@ -36,6 +36,9 @@ gem 'bcrypt', '~> 3.1.7'
 # CMS engine
 gem 'storytime'
 
+# Flexible authentication solution
+gem 'devise', '< 4.0.0'
+
 # ActiveJob adapter
 gem 'queue_classic', '~> 3.1.0'
 
