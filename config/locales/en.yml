@@ -21,3 +21,6 @@
 
 en:
   hello: "Hello world"
+  layout:
+    subscribe_to_blog: 'Subscribe to Blog'
+    alternative_subscribe_modal_msg: 'Enter your email address to subscribe to this blog and receive notifications of new posts by email.'

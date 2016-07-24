@@ -18,7 +18,7 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <%= link_to "#{t 'layout.subscribe_to', site_name: @current_storytime_site.title}", "#", data: {target: "#addSubscriptionModal", toggle: "modal"} %>
+            <%= link_to "#{t 'layout.subscribe_to_blog'}", "#", data: {target: "#addSubscriptionModal", toggle: "modal"} %>
           </li>
           <% if user_signed_in? %>
             <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
