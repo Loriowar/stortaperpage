@@ -1,0 +1,12 @@
+[Unit]
+Description=Simple queue worker for sending emails from webapp
+Requires=postgresql.service
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+Environment=RAILS_ENV=production QUEUE=mailers
+EnvironmentFile=/path/to/webapp/lib/system/environment/variables/list
+WorkingDirectory=/path/to/webapp
+ExecStart=/usr/local/bin/rake qc:work

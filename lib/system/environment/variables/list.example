@@ -1,4 +1,17 @@
 # system env variables for webapp
+#
+### Usage examples
+## Apache2
+# use follows construction inside /etc/apache2/envvars:
+#   set -a
+#   . /path/to/this/file
+#   set +a
+#
+## Systemd
+# use follows into *.service file:
+#   [Service]
+#   EnvironmentFile=/path/to/this/file
+#
 MAIL_SENDER_SITE_HOST="my.site.com"
 MAIL_SENDER_SITE_PORT="80"
 MAIL_SENDER_ADDRESS="smtp.domain.com"
