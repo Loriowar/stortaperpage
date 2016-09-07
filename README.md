@@ -5,3 +5,7 @@ This is a source code of blog, based on [Storytime](https://github.com/Cultivate
 ## Idea
 
 This must be lightweight, easy to use as for user and writers, flexible configurable platform for blog.
+
+## Example
+
+Working app can be found on [blog.loriowar.com](https://blog.loriowar.com).
