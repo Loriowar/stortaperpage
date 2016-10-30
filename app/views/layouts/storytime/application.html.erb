@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title><%= t('layout.title') %></title>
+
+    <%= stylesheet_link_tag    "storytime/application", media: "all" %>
+    <%= javascript_include_tag "storytime/application" %>
+
+    <%# additional JS and CSS for simple extension of functions; usage of :head anchor require change of assets.rb %>
+    <%= stylesheet_link_tag    "custom_storytime/application", media: "all" %>
+    <%= javascript_include_tag "custom_storytime/application" %>
+
+    <%= csrf_meta_tags %>
+
+    <%= yield :head %>
+  </head>
+
+  <body class="<%= params[:controller].split('/').join(' ') %> <%= params[:action] %> <%= params[:controller].parameterize %>-controller <%=params[:action]%>-action" data-controller="<%=params[:controller].camelize%>" data-action="<%=params[:action].camelize%>">
+    <%= render "storytime/application/storytime/navigation", storytime_button_classes: "dark rounded" %>
+    <%= render "storytime/application/storytime/flash" %>
+    <%= render "storytime/application/storytime/header" %>
+    <%# extension of layout for adding common content on each page of website %>
+    <%= render "common_parts/layout/body" %>
+
+    <%= yield %>
+    
+    <%= render "storytime/application/storytime/footer" %>
+    <%= render "storytime/sites/google_analytics_code" %>
+  </body>
+</html>

@@ -9,3 +9,9 @@ This must be lightweight, easy to use as for user and writers, flexible configur
 ## Example
 
 Working app can be found on [blog.loriowar.com](https://blog.loriowar.com).
+
+## Features
+
+* Ability to login with both username or email.
+* Secret keys and mailer setting moved to env variables.
+* Ability to submit misprints using Ctrl+Enter.

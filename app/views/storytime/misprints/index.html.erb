@@ -1,0 +1,37 @@
+<%# @todo: require adaptive css for this template; same as used in other parts of storytime %>
+<div class="storytime-misprint-content">
+  <% if @misprints.any? %>
+    <table class="table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Text</th>
+          <th>User message</th>
+          <th>Link to page</th>
+          <th>Created at</th>
+          <th>Fixed at</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @misprints.each do |misprint| %>
+          <tr>
+            <td><%= misprint.id %></td>
+            <td><%= misprint.target_text %></td>
+            <td><%= misprint.user_message %></td>
+            <td><%= link_to 'Page', misprint.page_url %></td>
+            <td><%= misprint.created_at %></td>
+            <td><%= misprint.fixed_at %></td>
+            <td>
+              <% unless misprint.fixed? %>
+                <%= link_to 'Fixed', storytime_misprint_fixed_path(misprint_id: misprint.id),  method: :post %>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% else %>
+    No data
+  <% end %>
+</div>

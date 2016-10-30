@@ -55,5 +55,11 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
+  namespace :storytime do
+    resources :misprints, only: [:index, :create] do
+      post :fixed
+    end
+  end
+
   mount Storytime::Engine => '/'
 end

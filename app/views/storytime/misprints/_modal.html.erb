@@ -1,0 +1,25 @@
+<div id="addMisprintModal" class='modal fade'>
+  <div class='modal-dialog'>
+    <div class='modal-content'>
+      <%= simple_form_for Storytime::Misprint.new, url: storytime_misprints_path(format: :json), remote: true do |f| %>
+        <div class='modal-header'>
+          <a class='close' data-dismiss='modal'>&times;</a>
+          <h4 class="modal-title"><%= t 'layout.misprint_report'%></h4>
+        </div>
+        <div class='modal-body'>
+          <p class="missprint-text-fragment"></p>
+          <%= f.input :page_url, as: :hidden %>
+          <%= f.input :target_text, as: :hidden %>
+          <div class="storytime-subscription-input">
+            <%= f.input :user_message, label: false, input_html: {autocomplete: :off} %>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="misprint-submit">
+            <%= f.submit "Submit", class: "btn btn-primary" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

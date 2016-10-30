@@ -24,3 +24,20 @@ en:
   layout:
     subscribe_to_blog: 'Subscribe to Blog'
     alternative_subscribe_modal_msg: 'No spam, no promotions, no ads, only notifications of new posts.'
+    misprint_report: 'Misprint'
+
+  activerecord:
+      models:
+        misprint: Misprint
+      attributes:
+        user:
+          page_url: Page URL
+          target_text: Text
+          user_message: Message
+
+  controller:
+    misprints:
+      action:
+        create:
+          success_message: "Thanks! We'll fix this shortly."
+          error_message: "Something goes wrong. Try again later."
