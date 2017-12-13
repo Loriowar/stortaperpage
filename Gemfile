@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.5'
+gem 'rails'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
 gem 'pg'
@@ -34,7 +34,7 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development
 
 # CMS engine
-gem 'storytime'
+gem 'storytime', git: 'https://github.com/Loriowar/storytime.git', branch: 'custom'
 
 # Flexible authentication solution
 gem 'devise', '< 4.0.0'
