@@ -1,4 +1,4 @@
-class CreateStorytimeMisprintsTable < ActiveRecord::Migration
+class CreateStorytimeMisprintsTable < ActiveRecord::Migration[4.2]
   def change
     create_table :storytime_misprints do |t|
       t.text :target_text

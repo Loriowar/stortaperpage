@@ -1,5 +1,5 @@
 # This migration comes from storytime (originally 20140916183056)
-class CreateStorytimeAutosaves < ActiveRecord::Migration
+class CreateStorytimeAutosaves < ActiveRecord::Migration[4.2]
   def change
     create_table :storytime_autosaves do |t|
       t.text :content

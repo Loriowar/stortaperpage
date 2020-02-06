@@ -1,5 +1,5 @@
 # This migration comes from storytime (originally 20150226201739)
-class AddCustomDomainToStorytimeSites < ActiveRecord::Migration
+class AddCustomDomainToStorytimeSites < ActiveRecord::Migration[4.2]
   def change
     add_column :storytime_sites, :custom_domain, :string
   end

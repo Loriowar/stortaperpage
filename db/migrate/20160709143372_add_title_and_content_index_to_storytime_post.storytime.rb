@@ -1,5 +1,5 @@
 # This migration comes from storytime (originally 20150122200805)
-class AddTitleAndContentIndexToStorytimePost < ActiveRecord::Migration
+class AddTitleAndContentIndexToStorytimePost < ActiveRecord::Migration[4.2]
   def up
     if Storytime.search_adapter == Storytime::PostgresSearchAdapter
       execute "CREATE INDEX posts_title_contentx ON storytime_posts USING gin(to_tsvector('english', coalesce(title, '') || ' ' || coalesce(content, '')));"

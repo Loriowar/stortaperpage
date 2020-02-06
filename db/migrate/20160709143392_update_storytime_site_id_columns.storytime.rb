@@ -1,5 +1,5 @@
 # This migration comes from storytime (originally 20150225145608)
-class UpdateStorytimeSiteIdColumns < ActiveRecord::Migration
+class UpdateStorytimeSiteIdColumns < ActiveRecord::Migration[4.2]
   def up
     Storytime::Migrators::V1.add_site_id_to_autosaves
     Storytime::Migrators::V1.add_site_id_to_comments

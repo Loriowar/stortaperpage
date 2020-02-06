@@ -1,5 +1,5 @@
 # This migration comes from storytime (originally 20140501174341)
-class CreateStorytimePosts < ActiveRecord::Migration
+class CreateStorytimePosts < ActiveRecord::Migration[4.2]
   def change
     create_table :storytime_posts do |t|
       t.references :user, index: true

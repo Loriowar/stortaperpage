@@ -1,5 +1,5 @@
 # This migration comes from storytime (originally 20140514200304)
-class CreateStorytimeTaggings < ActiveRecord::Migration
+class CreateStorytimeTaggings < ActiveRecord::Migration[4.2]
   def change
     create_table :storytime_taggings do |t|
       t.belongs_to :tag, index: true

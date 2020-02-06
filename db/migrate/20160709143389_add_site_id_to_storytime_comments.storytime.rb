@@ -1,5 +1,5 @@
 # This migration comes from storytime (originally 20150225143826)
-class AddSiteIdToStorytimeComments < ActiveRecord::Migration
+class AddSiteIdToStorytimeComments < ActiveRecord::Migration[4.2]
   def change
     add_column :storytime_comments, :site_id, :integer
     add_index :storytime_comments, :site_id

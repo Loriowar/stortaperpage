@@ -1,5 +1,5 @@
 # This migration comes from storytime (originally 20140521190606)
-class CreateStorytimeRoles < ActiveRecord::Migration
+class CreateStorytimeRoles < ActiveRecord::Migration[4.2]
   def change
     create_table :storytime_roles do |t|
       t.string :name, index: true

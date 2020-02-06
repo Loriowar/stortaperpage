@@ -1,5 +1,5 @@
 # This migration comes from storytime (originally 20140514200234)
-class CreateStorytimeTags < ActiveRecord::Migration
+class CreateStorytimeTags < ActiveRecord::Migration[4.2]
   def change
     create_table :storytime_tags do |t|
       t.string :name

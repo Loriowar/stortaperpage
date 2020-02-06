@@ -1,5 +1,5 @@
 # This migration comes from storytime (originally 20150206201847)
-class AddSiteIdToStorytimePost < ActiveRecord::Migration
+class AddSiteIdToStorytimePost < ActiveRecord::Migration[4.2]
   def change
     add_column :storytime_posts, :site_id, :integer
 

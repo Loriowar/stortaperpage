@@ -1,5 +1,5 @@
 # This migration comes from storytime (originally 20140516141252)
-class CreateStorytimeVersions < ActiveRecord::Migration
+class CreateStorytimeVersions < ActiveRecord::Migration[4.2]
   def change
     create_table :storytime_versions do |t|
       t.text :content

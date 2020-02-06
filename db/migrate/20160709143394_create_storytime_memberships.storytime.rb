@@ -1,5 +1,5 @@
 # This migration comes from storytime (originally 20150225212917)
-class CreateStorytimeMemberships < ActiveRecord::Migration
+class CreateStorytimeMemberships < ActiveRecord::Migration[4.2]
   def change
     create_table :storytime_memberships do |t|
       t.references :user, index: true

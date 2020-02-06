@@ -1,4 +1,4 @@
-class AddQueueClassic < ActiveRecord::Migration
+class AddQueueClassic < ActiveRecord::Migration[4.2]
   def self.up
     QC::Setup.create
   end
