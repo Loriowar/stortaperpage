@@ -4,7 +4,7 @@ module Storytime
   # @note: inheritance required for proper display of page header, but provide problem with path-helper
   class MisprintsController < ApplicationController
 
-    before_filter :check_permissions
+    before_action :check_permissions
 
     def index
       @misprints = Misprint.all.order(fixed_at: :desc)
